@@ -1,4 +1,5 @@
 from dis import dis
+import logging
 from flask import Flask, render_template, request, redirect
 import _json
 
@@ -9,9 +10,9 @@ class veiculo:
     def index():
         dict = {}
         try:
-            print("AQUI")
+            logging.info("validacao request GET/POST")
             if request.method == 'POST':
-                print("TO AQUI")
+                logging.info("is Post")
                 carro_usuario = request.form['input_name_car']
                 km_liter = request.form['input_km_ltr']
                 dist_viagem = request.form['input_dist_viagem']
@@ -21,7 +22,7 @@ class veiculo:
                     "DISTANCIA": dist_viagem
                 }
         except:
-            print("toaquiexcept")
+            logging.eror("exception on request")
             pass
 
         
