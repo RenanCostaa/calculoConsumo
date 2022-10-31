@@ -28,6 +28,5 @@ class veiculo:
         print(dict) 
         return render_template('index.html')
 
-
 if app == __name__:
     app.run(debug=True)
