@@ -1,0 +1,14 @@
+[
+    {
+        "nome" : "Gasolina",
+        "preco" : 4.70   
+    },
+    {
+        "nome" : "Diesel",
+        "preco" : 5.20   
+    },
+    {
+        "nome" : "Alcool",
+        "preco" : 3.80   
+    }
+]
