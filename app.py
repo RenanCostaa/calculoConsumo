@@ -11,12 +11,14 @@ class veiculo:
     def index():  
         dict = {}
         try:
+            teste = False
             gasolina = json.loads(open('combustiveis.json','r').readlines()[0])
             print(gasolina)
             print(gasolina['gasolina']['31/10'])
             logging.info("validacao request GET/POST")
             if request.method == 'POST':
                 logging.info("is Post")
+                teste = True
                 carro_usuario = request.form['input_name_car']
                 km_liter = float(request.form['input_km_ltr'])
                 dist_viagem = float(request.form['input_dist_viagem'])
