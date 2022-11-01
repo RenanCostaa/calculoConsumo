@@ -1,0 +1,23 @@
+.form{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    margin: 120px;
+    padding: 25px;
+    border: 1px solid black;
+    border-radius: 3%;
+
+    width: 500px;
+}
+
+.inpuText{
+    width: 350px;
+    margin: 15px;
+}
+
+.button{
+    margin: 15px;
+    width: 100px;
+}

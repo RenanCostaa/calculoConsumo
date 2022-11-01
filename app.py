@@ -7,12 +7,6 @@ app = Flask(__name__)
 
 class veiculo:    
 
-   # def calcula():
-        #logging.info("enter calcula")
-        
-        
-
-
     @app.route("/", methods=['GET','POST'])
     def index():  
         dict = {}
@@ -35,10 +29,7 @@ class veiculo:
             logging.error("exception on request")
             pass
 
-        print(dict) 
-        return render_template('index.html')
-
-    
+        return render_template('index.html') 
 
 if app == __name__:
     app.run(debug=True)
