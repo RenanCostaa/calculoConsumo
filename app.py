@@ -41,7 +41,5 @@ class veiculo:
         print(dict) 
         return render_template('index.html', dict = dict)
 
-    
-
 if app == __name__:
     app.run(debug=True)
