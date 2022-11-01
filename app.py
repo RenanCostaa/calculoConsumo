@@ -8,13 +8,15 @@ app = Flask(__name__)
 class veiculo:    
 
     def calcula():
+        logging.info("enter calcula")
         gasolina = json.loads(open('combustiveis.json','r').readlines()[0])
-        print(json.dumps(gasolina))
-        return 0
+        print(gasolina)
 
 
     @app.route("/", methods=['GET','POST'])
     def index():
+        obj=veiculo()
+
         dict = {}
         try:
             logging.info("validacao request GET/POST")
@@ -28,10 +30,10 @@ class veiculo:
                     "KM/L" : km_liter,
                     "DISTANCIA": dist_viagem
                 }
-                calcula()   
+                obj.calcula()   
 
         except:
-            logging.eror("exception on request")
+            logging.error("exception on request")
             pass
 
         print(dict) 
